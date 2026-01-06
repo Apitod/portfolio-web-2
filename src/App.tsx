@@ -9,14 +9,28 @@ import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Activity from "./Pages/Activity";
 
+import { useState, useEffect } from "react";
+
 function App() {
+  const [lineCount, setLineCount] = useState([7, 3, 6]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setLineCount(window.innerWidth < 768 ? [3, 2, 3] : [7, 3, 6]);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <div className="Background">
         <FloatingLines
           linesGradient={["#8400FF", "#FF00E5", "#00D9FF"]}
           enabledWaves={["bottom", "middle", "top"]}
-          lineCount={[7, 3, 6]}
+          lineCount={lineCount}
           lineDistance={2}
           animationSpeed={0.8}
           interactive={true}

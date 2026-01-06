@@ -1,6 +1,7 @@
 import DomeGallery from "../components/DomeGallery";
 import '../Design/DomeGallery.css';
 import '../Design/Activity.css';
+import { useState, useEffect } from "react";
 
 // Videos
 import makingAiModel from "../assets/activity/Making AI model.mp4";
@@ -103,6 +104,18 @@ function Activity() {
     { src: certEnglish, alt: "English ONSB", description: "Certificate: ONSB 2023 - English." },
   ];
 
+  const [segments, setSegments] = useState(25);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSegments(window.innerWidth < 768 ? 20 : 45);
+    };
+
+    handleResize(); // Set initial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="ActivityWrapper">
       <DomeGallery
@@ -116,7 +129,7 @@ function Activity() {
         maxVerticalRotationDeg={5}
         dragSensitivity={20}
         enlargeTransitionMs={300}
-        segments={45}
+        segments={segments}
         dragDampening={3}
         openedImageHeight="400px"
         openedImageWidth="400px"
