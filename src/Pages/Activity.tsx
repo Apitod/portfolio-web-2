@@ -14,7 +14,7 @@ import aiesecOpening from "../assets/activity/aiesec local project opening.mp4";
 import aiesecPresentation from "../assets/activity/aiesec local project presentation.mp4";
 import aiesecTeaching2 from "../assets/activity/aiesec local project teaching.mp4";
 import aiesecVolunteer2 from "../assets/activity/aiesec volunteer2.mp4";
-import automation from "../assets/activity/automation.mp4";
+// import automation from "../assets/activity/automation.mp4";
 import opencv from "../assets/activity/opencv.mp4";
 
 // Images - AIESEC & Volunteering
@@ -63,7 +63,7 @@ function Activity() {
     { src: yriVid, alt: "YRI Video", description: "Active contribution to Youth Ranger Indonesia initiatives.", type: "video" as const },
     { src: yoloProject, alt: "YOLO Project", description: "Real-time object detection system in action.", type: "video" as const },
     { src: yoloProject2, alt: "YOLO Project Demo", description: "Advanced crowd analysis using YOLOv8.", type: "video" as const },
-    { src: automation, alt: "Automation", description: "Streamlining complex workflows with automation tools.", type: "video" as const },
+    { src: "https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_25fps.mp4", alt: "Automation", description: "Streamlining complex workflows with automation tools.", type: "video" as const },
     { src: opencv, alt: "OpenCV Demo", description: "Computer vision projects for real-world applications.", type: "video" as const },
     { src: aiesecOpening, alt: "AIESEC Opening", description: "Opening session for AIESEC local projects.", type: "video" as const },
     { src: aiesecPresentation, alt: "AIESEC Presentation", description: "Presenting social impact ideas at AIESEC.", type: "video" as const },
