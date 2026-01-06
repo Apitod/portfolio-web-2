@@ -1,0 +1,86 @@
+/* Base trigger style */
+.interactive-image-trigger {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    /* Default z-index in grid */
+}
+
+/* Ensure the image inside fills the trigger container */
+.interactive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+/* Overlay covering the screen */
+.interactive-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    /* Highest priority */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* The expanded card */
+.interactive-card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image in the card */
+.interactive-card-img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+/* Description area */
+.interactive-description {
+    padding: 20px;
+    color: #fff;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.interactive-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.close-btn {
+    align-self: flex-end;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

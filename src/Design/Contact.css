@@ -1,0 +1,272 @@
+.ContactContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ContactWrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.ContactCard {
+  width: 60%;
+  height: 83%;
+  max-width: 1000px;
+  max-height: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactContent {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ContactTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.ContactSubtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.ContactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(132, 0, 255, 0.4) transparent;
+}
+
+.ContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.InfoTitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 0.5rem;
+}
+
+.InfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.InfoLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(132, 0, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.InfoText {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.InfoLink {
+  font-size: 0.875rem;
+  color: rgba(132, 0, 255, 1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.InfoLink:hover {
+  color: rgba(132, 0, 255, 0.8);
+  text-decoration: underline;
+}
+
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.FormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.FormLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.87);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.FormInput,
+.FormTextarea {
+  padding: 0.625rem 0.875rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #222;
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.FormInput:focus,
+.FormTextarea:focus {
+  border-color: rgba(132, 0, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(132, 0, 255, 0.1);
+}
+
+.FormTextarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.SubmitButton {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(132, 0, 255, 0.8), rgba(132, 0, 255, 0.6));
+  border: 1px solid rgba(132, 0, 255, 0.8);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.SubmitButton:hover {
+  background: linear-gradient(135deg, rgba(132, 0, 255, 1), rgba(132, 0, 255, 0.8));
+  box-shadow: 0 8px 25px rgba(132, 0, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.SubmitButton:active {
+  transform: translateY(0);
+}
+
+.SubmitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.SubmitButton:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.StatusMessage {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+.StatusSuccess {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: rgba(34, 197, 94, 1);
+}
+
+.StatusError {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: rgba(239, 68, 68, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.LogoLoopContainer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  min-height: 60px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .ContactGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ContactContainer {
+    padding: 1rem;
+  }
+
+  .ContactContent {
+    padding: 1rem;
+  }
+
+  .ContactTitle {
+    font-size: 1.5rem;
+  }
+
+  .ContactSubtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .ContactCard {
+    width: 90%;
+    height: 80%;
+  }
+}

@@ -1,0 +1,183 @@
+.HeroContainer {
+  display: grid;
+  grid-template-columns: 2fr 2.3fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 160px 80px 20px;
+  box-sizing: border-box;
+}
+
+
+.Right {
+  display: flex;
+  /* flex: 1; */
+  /* flex-direction: column; */
+  padding: 25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.Card {
+  margin-left: 20px;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ContactButtonContainer {
+  padding: 280px 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactButtonBorder,
+.ContactButton {
+  letter-spacing: -0.5px;
+  color: #b19eef;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: 0;
+  appearance: button;
+  background-color: rgba(0, 0, 0, 0.267);
+  background-image: none;
+  font-weight: 400;
+}
+
+.ContactButtonBorder {
+  transition: transform 0.1s ease-in-out;
+}
+
+.ContactButtonBorder:hover {
+  box-sizing: border-box;
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(177, 158, 239, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .HeroContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 60px 20px 20px;
+    margin: 20px auto;
+  }
+
+  .Right {
+    padding: 20px;
+    padding-left: 15px;
+  }
+
+  .Card {
+    margin-left: 15px;
+    max-width: 100%;
+  }
+
+  .ContactButtonContainer {
+    padding: 200px 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .HeroContainer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 16px 16px;
+    margin: 16px auto;
+  }
+
+  .Right {
+    padding: 16px;
+    padding-left: 10px;
+  }
+
+  .Card {
+    margin-left: 10px;
+    gap: 16px;
+  }
+
+  .ContactButtonContainer {
+    position: relative;
+    padding: 40px 16px;
+    margin-top: 20px;
+  }
+
+  .ContactButtonBorder,
+  .ContactButton {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .HeroContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 12px 12px;
+    margin: 12px auto;
+  }
+
+  .Right {
+    padding: 12px;
+    padding-left: 8px;
+  }
+
+  .Card {
+    margin-left: 8px;
+    gap: 12px;
+  }
+
+  .ContactButtonContainer {
+    padding: 30px 12px;
+    margin-top: 16px;
+  }
+
+  .ContactButtonBorder,
+  .ContactButton {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+  .HeroContainer {
+    padding: 20px 10px 10px;
+    gap: 16px;
+  }
+
+  .Right {
+    padding: 10px;
+    padding-left: 5px;
+  }
+
+  .Card {
+    margin-left: 5px;
+    gap: 10px;
+  }
+
+  .ContactButtonContainer {
+    padding: 24px 10px;
+  }
+
+  .ContactButtonBorder,
+  .ContactButton {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}

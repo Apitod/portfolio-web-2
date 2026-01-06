@@ -1,0 +1,19 @@
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: clamp(1.75rem, 8vw, 5.3rem);
+  /* Responsive: 28px to 85px */
+  max-width: 100%;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
